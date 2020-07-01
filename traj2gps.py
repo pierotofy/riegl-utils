@@ -13,6 +13,10 @@ from scipy.interpolate import interp1d
 from PIL import Image
 import piexif
 
+def die(msg):
+    print("ERR: %s" % msg)
+    exit(1)
+
 parser = argparse.ArgumentParser(description='Trajectory to GPS')
 parser.add_argument('--crs', '-c',
                     metavar='<string>',
@@ -46,10 +50,6 @@ if ddb_path is None:
 exiftool_path = shutil.which('exiftool')
 if exiftool_path is None:
     die("exiftool not found. Is it installed?")
-
-def die(msg):
-    print("ERR: %s" % msg)
-    exit(1)
 
 files = []
 if os.path.isdir(args.input):
