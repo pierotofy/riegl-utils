@@ -1,6 +1,6 @@
 astropy==4.0.1.post1
 cffi==1.14.0
-cryptography==2.9.2
+cryptography==3.2
 cycler==0.10.0
 dqsegdb2==1.0.1
 gwdatafind==1.0.4
